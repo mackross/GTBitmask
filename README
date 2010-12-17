@@ -1,0 +1,8 @@
+GTBitmask 0.1
+------
+Explore the demo project to see examples of code usage.
+Look carefully at the SampleEntityWithBitmask class and the togglePredicate method in GTBitmask_AppDelegate.
+
+To add to your own projects just add files in GTBitmask directory.
+
+This project logs the predicate format string that is used when the toggle button is pressed.
