@@ -3,27 +3,39 @@
 //  GTBitmask
 //
 //  Created by Andrew Mackenzie-Ross on 17/12/10.
-//  Copyright __MyCompanyName__ 2010 . All rights reserved.
 //
 
 #import "GTBitmask_AppDelegate.h"
-
+#import "GTBitmask.h"
 @implementation GTBitmask_AppDelegate
 
 @synthesize window;
+@synthesize predicate;
 
-/**
-    Returns the support directory for the application, used to store the Core Data
-    store file.  This code uses a directory named "GTBitmask" for
-    the content, either in the NSApplicationSupportDirectory location or (if the
-    former cannot be found), the system's temporary directory.
- */
+- (IBAction)togglePredicate:(id)sender {
+	if (self.predicate) {
+		self.predicate = nil;
+		return;
+	}
+	// play with this :)
+	NSArray *dotw = [NSArray arrayWithObjects:@"GTMonday",@"GTTuesday",@"GTWednesday",@"GTThursday",@"GTFriday",@"GTSaturday",@"GTSunday",nil];
+	GTBitmask *requiredAsYES = [[GTBitmask alloc] initWithKeys:dotw];
+	GTBitmask *requiredAsNO = [[GTBitmask alloc] initWithKeys:dotw];
+	[requiredAsYES setBoolValue:YES ForKey:@"GTTuesday"];
+	[requiredAsNO setBoolValue:YES ForKey:@"GTWednesday"];
+	NSString *formatString = [GTBitmask predicateStringFromTrueBitmask:requiredAsYES
+																		andFalseBitmask:requiredAsNO 
+														forCoreDataAttributeWithKey:@"daysOfTheWeekBitmask"];
+	NSLog(@"%@",formatString);
+	self.predicate = [NSPredicate predicateWithFormat:formatString];
+}
 
 - (NSString *)applicationSupportDirectory {
 
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
-    return [basePath stringByAppendingPathComponent:@"GTBitmask"];
+   // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+   // NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
+   NSString *basePath = [[NSBundle mainBundle] bundlePath];
+	return basePath;
 }
 
 
@@ -207,6 +219,7 @@
 	
     [super dealloc];
 }
+
 
 
 @end

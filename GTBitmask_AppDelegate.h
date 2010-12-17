@@ -3,7 +3,6 @@
 //  GTBitmask
 //
 //  Created by Andrew Mackenzie-Ross on 17/12/10.
-//  Copyright __MyCompanyName__ 2010 . All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -15,8 +14,9 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
+	NSPredicate *predicate;
 }
-
+@property (nonatomic, retain) IBOutlet NSPredicate *predicate;
 @property (nonatomic, retain) IBOutlet NSWindow *window;
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -24,5 +24,5 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)saveAction:sender;
-
+- (IBAction)togglePredicate:(id)sender ;
 @end
