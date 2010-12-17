@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1846EE5B12BB2D7C00598999 /* GTBitmask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846EE5812BB2D7C00598999 /* GTBitmask.m */; };
+		1846EE5C12BB2D7C00598999 /* NSManagedObject+GTBitmask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846EE5A12BB2D7C00598999 /* NSManagedObject+GTBitmask.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* GTBitmask_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* GTBitmask_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* GTBitmask_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* GTBitmask_AppDelegate.m */; };
@@ -18,6 +20,10 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1846EE5712BB2D7C00598999 /* GTBitmask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBitmask.h; sourceTree = "<group>"; };
+		1846EE5812BB2D7C00598999 /* GTBitmask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBitmask.m; sourceTree = "<group>"; };
+		1846EE5912BB2D7C00598999 /* NSManagedObject+GTBitmask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+GTBitmask.h"; sourceTree = "<group>"; };
+		1846EE5A12BB2D7C00598999 /* NSManagedObject+GTBitmask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+GTBitmask.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -70,6 +76,17 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		1846EE5612BB2D6100598999 /* GTBitmask */ = {
+			isa = PBXGroup;
+			children = (
+				1846EE5712BB2D7C00598999 /* GTBitmask.h */,
+				1846EE5812BB2D7C00598999 /* GTBitmask.m */,
+				1846EE5912BB2D7C00598999 /* NSManagedObject+GTBitmask.h */,
+				1846EE5A12BB2D7C00598999 /* NSManagedObject+GTBitmask.m */,
+			);
+			name = GTBitmask;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +98,7 @@
 		29B97314FDCFA39411CA2CEA /* GTBitmask */ = {
 			isa = PBXGroup;
 			children = (
+				1846EE5612BB2D6100598999 /* GTBitmask */,
 				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -192,6 +210,8 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				77C8280E06725ACE000B614F /* GTBitmask_AppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* GTBitmask_DataModel.xcdatamodel in Sources */,
+				1846EE5B12BB2D7C00598999 /* GTBitmask.m in Sources */,
+				1846EE5C12BB2D7C00598999 /* NSManagedObject+GTBitmask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
